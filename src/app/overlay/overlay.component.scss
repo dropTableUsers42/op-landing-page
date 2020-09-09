@@ -15,8 +15,71 @@
 
 	border-radius: 40px;
 	background-color: $secondary-color;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
 
 	z-index: 100;
+
+	
+
+	#closeButton{
+		width: 24px;
+		height: auto;
+
+		position: absolute;
+		right: 30px;
+		top: 30px;
+	}
+
+	#overlayTextContainer {
+
+		margin-top: 5px;
+		margin-bottom: 5px;
+		height: calc(100% - 10px);
+		width: 100%;
+		overflow-y: scroll;
+		overflow-x: hidden;
+
+		#overlayText {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 22px;
+			line-height: 33px;
+	
+			color: $text-color;
+	
+			margin-top: 45px;
+			margin-left: 50px;
+			margin-right: 85px;
+			margin-bottom: 51px;
+	
+			white-space: pre-line;
+		}
+
+		@media screen and (max-width: 900px) {
+
+			#overlayText {
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 19px;
+
+				margin-top: 25px;
+				margin-left: 25px;
+				margin-right: 24px;
+				margin-bottom: 57px;
+			}
+		}
+	}
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	#overlayTextContainer::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	#overlayTextContainer {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
+	
 }
 
 @media screen and (max-width: 900px)

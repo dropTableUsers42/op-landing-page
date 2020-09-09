@@ -1,3 +1,8 @@
 <div *ngIf="show" #overlay class="overlay">
-
+	<img id="closeButton" src="assets/svg/close.svg">
+	<div #overlayTextContainer id="overlayTextContainer">
+		<div #overlayText id="overlayText">
+			{{text}}
+		</div>
+	</div>
 </div>
