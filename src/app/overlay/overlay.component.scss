@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.overlay {
+
+	position: fixed;
+
+	top: 0;
+	left: 50%;
+
+	margin-top: 125px;
+	margin-left: -43vw;
+
+	height: 73vh;
+	width: 86vw;
+
+	border-radius: 40px;
+	background-color: $secondary-color;
+
+	z-index: 100;
+}
+
+@media screen and (max-width: 900px)
+{
+	.overlay {
+		margin-top: 95px;
+	}
+
+}
