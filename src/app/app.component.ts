@@ -27,13 +27,7 @@ export class AppComponent {
 
   @ViewChild('toggleButton') toggle: ElementRef;
 
-  constructor(private renderer: Renderer2, private router: Router) {
-    this.router.events.subscribe(event => {
-      if(event instanceof NavigationEnd)
-      {
-        gtag('config', 'UA-177592099-1');
-      }
-    });
+  constructor(private renderer: Renderer2) {
   }
 
   showOverlay(): void{
