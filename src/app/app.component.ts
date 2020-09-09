@@ -1,5 +1,9 @@
 import { Component, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { IImage } from 'ng-simple-slideshow';
+import { Router, NavigationEnd } from '@angular/router';
+import { getHtmlTagDefinition } from '@angular/compiler';
+
+declare let gtag: Function ;
 
 @Component({
   selector: 'app-root',
@@ -23,7 +27,15 @@ export class AppComponent {
 
   @ViewChild('toggleButton') toggle: ElementRef;
 
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2, private router: Router) {
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd)
+      {
+        gtag('config', 'UA-177592099-1', {
+          'page_path': event.urlAfterRedirects
+        });
+      }
+    });
   }
 
   showOverlay(): void{
