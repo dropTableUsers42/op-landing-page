@@ -1,9 +1,22 @@
 import { Component, OnInit, Input, Renderer2, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.scss']
+  styleUrls: ['./overlay.component.scss'],
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({ transform: 'translateY(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateY(-100%)' }),
+        animate(200)
+      ]),
+      transition(':leave', [
+        animate(200, style({ transform: 'translateY(100%)' }))
+      ]),
+    ])
+  ]
 })
 export class OverlayComponent implements OnInit {
 
