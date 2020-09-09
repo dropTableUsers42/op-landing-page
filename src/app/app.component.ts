@@ -22,7 +22,6 @@ export class AppComponent {
   isOverlayOpen = false;
 
   @ViewChild('toggleButton') toggle: ElementRef;
-  @ViewChild('overlay') overlay: ElementRef;
 
   constructor(private renderer: Renderer2) {
   }
