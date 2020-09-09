@@ -12,7 +12,7 @@ declare let gtag: Function ;
 })
 export class AppComponent {
   imageUrls: (string | IImage)[] = [
-    { url: 'assets/svg/tags/Coding-01.svg', backgroundSize: 'contain', backgroundPosition: 'center', caption: 'Coding', href: '#config' },
+    { url: 'assets/svg/tags/Coding-01.svg', backgroundSize: 'contain', backgroundPosition: 'center', caption: 'Coding' },
     { url: 'assets/svg/tags/Competition-01.svg', backgroundSize: 'contain', backgroundPosition: 'center', caption: 'Competition' },
     { url: 'assets/svg/tags/Conference-01.svg', backgroundSize: 'contain', backgroundPosition: 'center', caption: 'Conference' },
     { url: 'assets/svg/tags/Courses-01.svg', backgroundSize: 'contain', backgroundPosition: 'center', caption: 'Courses' },
