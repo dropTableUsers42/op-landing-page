@@ -23,7 +23,7 @@
 
 	#closeButton{
 		cursor: pointer;
-		width: 24px;
+		width: 20px;
 		height: auto;
 
 		position: absolute;
@@ -50,8 +50,11 @@
 			font-family: Poppins;
 			font-style: normal;
 			font-weight: 500;
-			font-size: 23px;
+			font-size: 22px;
 			line-height: 33px;
+
+			text-align: justify;
+			text-justify: inter-word;
 	
 			color: $text-color;
 	
