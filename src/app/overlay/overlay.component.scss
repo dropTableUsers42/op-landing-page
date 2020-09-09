@@ -30,6 +30,12 @@
 		top: 30px;
 	}
 
+	@media screen and (max-width:900px){
+		#closeButton {
+			width: 20px;
+		}
+	}
+
 	#overlayTextContainer {
 
 		margin-top: 5px;
