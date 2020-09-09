@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .container {
 
 	height: 100vh;
@@ -18,7 +20,7 @@
 }
 
 #landingTitle {
-	width: 55%;
+	width: 50vw;
 	height: auto;
 
 	margin-left: auto;
@@ -56,6 +58,10 @@
 }
 
 #footer {
+
+	background-color: $primary-color;
+
+	z-index: 100;
 
 	width: 100vw;
 

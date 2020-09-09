@@ -22,6 +22,7 @@
 	
 
 	#closeButton{
+		cursor: pointer;
 		width: 24px;
 		height: auto;
 
@@ -32,7 +33,7 @@
 
 	@media screen and (max-width:900px){
 		#closeButton {
-			width: 20px;
+			opacity: 0;
 		}
 	}
 
@@ -49,7 +50,7 @@
 			font-family: Poppins;
 			font-style: normal;
 			font-weight: 500;
-			font-size: 22px;
+			font-size: 23px;
 			line-height: 33px;
 	
 			color: $text-color;

@@ -3,7 +3,7 @@
 
 
   <div id="slideshow">
-    <slideshow [imageUrls]="imageUrls"
+    <slideshow *ngIf="!isOverlayOpen" [imageUrls]="imageUrls"
     [height]="'42vh'"
     [autoPlay]="true"
     [autoPlayInterval]="'5000'"
@@ -20,8 +20,8 @@
 <app-overlay #overlay [show]="isOverlayOpen" (closeEvent)="closeOverlay($event)"></app-overlay>
 
 
-<footer>
-  <div id="footer">
+<footer id="footer">
+  <div >
     <img #toggleButton id="aboutButton" (click)="showOverlay()" src="assets/svg/about.svg">
     <div id="socialButtons">
       <a href="https://www.linkedin.com/company/opproject"><img class="social-button" id="linkedinButton" src="assets/svg/linkedin.svg"></a>
