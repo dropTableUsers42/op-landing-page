@@ -20,7 +20,7 @@
 }
 
 #landingTitle {
-	min-height: 100px;
+	min-height: 35px;
 	width: 50vw;
 	height: auto;
 
@@ -40,6 +40,7 @@
 		margin-top: 25px;
 	}
 	#landingTitle {
+		min-height: 95px;
 		margin-bottom: 16vh;
 		content: url("../assets/svg/title-m.svg");
 	}
