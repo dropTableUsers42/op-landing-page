@@ -25,7 +25,7 @@
         </mat-select>
       </mat-form-field>
       <input *ngIf="collegeEntered === 'Other'"  class="input" placeholder="College" formControlName="collegeName">
-      <input [ngClass]="{'button-trans': true, 'button-invalid': preregForm.invalid}"id="submit" type="submit" value="Pre-register">
+      <input [ngClass]="{'button-trans': true, 'button-invalid': preregForm.invalid}"[disabled]="preregForm.invalid" id="submit" type="submit" value="Pre-register">
     </div>
   </form>
   <p *ngIf="currentStatus" class="text label hcentered">Thank you!</p>
