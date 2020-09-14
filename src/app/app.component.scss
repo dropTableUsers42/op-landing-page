@@ -80,6 +80,18 @@
 			margin-top: 10px;
 		}
 	}
+
+	@media screen and (max-width: 600px) {
+		#input_fields {
+			width: 250px;
+		}
+	}
+
+	@media screen and (max-width: 420px) {
+		#input_fields {
+			width: 200px;
+		}
+	}
 }
 
 #footer {

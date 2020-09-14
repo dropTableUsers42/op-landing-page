@@ -15,8 +15,6 @@ export class BackendService {
     this.currentStatusSubject = new BehaviorSubject<boolean>(JSON.parse(localStorage.getItem('currentStatus')));
     this.currentStatus = this.currentStatusSubject.asObservable();
 
-    this.updateStatus(false);
-
    }
 
   public get currentStatusValue(): boolean {

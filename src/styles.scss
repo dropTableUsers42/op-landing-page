@@ -106,6 +106,18 @@ footer {
 	min-width: 0;
 }
 
+@media screen and (max-width: 690px) {
+	.label {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.label {
+		font-size: 25px;
+	}
+}
+
 .col-flex {
 	display: flex;
 	flex-direction: column;
