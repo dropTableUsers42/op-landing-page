@@ -25,10 +25,11 @@
         </mat-select>
       </mat-form-field>
       <input *ngIf="collegeEntered === 'Other'"  class="input" placeholder="College" formControlName="collegeName">
-      <input class="button-trans" id="submit" type="submit" value="Pre-register">
+      <input [ngClass]="{'button-trans': true, 'button-invalid': preregForm.invalid}"id="submit" type="submit" value="Pre-register">
     </div>
   </form>
-  <p *ngIf="currentStatus" class="text label hcentered">Thank you for pre-registering!</p>
+  <p *ngIf="currentStatus" class="text label hcentered">Thank you!</p>
+  <p *ngIf="currentStatus" class="text label-small hcentered">We will get back to you soon.</p>
 </div>
 
 <app-overlay #overlay [show]="isOverlayOpen" (closeEvent)="closeOverlay($event)"></app-overlay>

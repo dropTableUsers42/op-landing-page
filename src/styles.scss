@@ -79,10 +79,15 @@ footer {
 	margin-bottom: 0px;
 }
 
-.label {
+.label, .label-small {
 	font-weight: bold;
 	font-size: 40px;
 	line-height: 40px;
+}
+
+.label-small {
+	font-weight: 600;
+	font-size: 24px;
 }
 
 .input {
@@ -110,11 +115,19 @@ footer {
 	.label {
 		font-size: 30px;
 	}
+
+	.label-small {
+		font-size: 20px;
+	}
 }
 
 @media screen and (max-width: 420px) {
 	.label {
 		font-size: 25px;
+	}
+
+	.label-small {
+		font-size: 18px;
 	}
 }
 
@@ -130,6 +143,8 @@ footer {
 .hcentered {
 	display: inline-block;
 	margin: 0 auto;
+
+	text-align: center;
 }
 
 .button-trans {
@@ -155,4 +170,12 @@ footer {
 .button-trans:hover {
 	background-color: $white-color;
 	color: $secondary-color;
+}
+
+.button-invalid, .button-invalid:hover {
+	border: 1.5px solid #9c9a9a;
+	color: #9c9a9a;
+	background: #5a5a5a;
+
+	cursor: not-allowed;
 }

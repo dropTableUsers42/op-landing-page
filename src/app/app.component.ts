@@ -45,7 +45,7 @@ export class AppComponent {
     email: new FormControl('',  Validators.required),
     college: new FormControl('',  Validators.required),
     collegeName: new FormControl('')
-  });
+  } );
 
   isOverlayOpen = false;
 
@@ -87,4 +87,17 @@ export class AppComponent {
     return this.backendService.currentStatusValue;
   }
 
+}
+
+function otherCollege(collegeKey: string, otherCollegeKey: string) {
+  return (group: FormGroup): {[key: string]: any} => {
+    let college = group.controls[collegeKey];
+    let otherCollege = group.controls[otherCollegeKey];
+
+    if(college.value === 'Other' && otherCollege.value === '')
+    {
+      return {collegReq: true};
+    }
+    return null;
+  }
 }
