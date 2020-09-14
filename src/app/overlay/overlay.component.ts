@@ -33,7 +33,7 @@ export class OverlayComponent implements OnInit {
 
   constructor(private renderer: Renderer2) {
     this.renderer.listen('window', 'click', (e: Event) => {
-      if (e.target !== this.overlay.nativeElement && e.target !== this.overlayText.nativeElement && e.target !== this.overlayTextContainer.nativeElement)
+      if (e.target !== this.overlay?.nativeElement && e.target !== this.overlayText?.nativeElement && e.target !== this.overlayTextContainer?.nativeElement)
       {
         this.closeOverlay(e);
       }

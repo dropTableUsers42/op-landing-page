@@ -2,6 +2,9 @@ import { Component, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { IImage } from 'ng-simple-slideshow';
 import { Router, NavigationEnd } from '@angular/router';
 import { getHtmlTagDefinition } from '@angular/compiler';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { BackendService } from './_services/backend.service';
 
 declare let gtag: Function ;
 
@@ -23,11 +26,34 @@ export class AppComponent {
     { url: 'assets/svg/tags/Workshop-01.svg', backgroundSize: 'contain', backgroundPosition: 'center', caption: 'Workshop' },
   ];
 
+  collegeNames = [
+    'BITS Pilani - Pilani Campus',
+    'BITS Pilani - Goa Campus',
+    'BITS Pilani - Hyderabad Campus',
+    'IIT Bombay',
+    'IIT Delhi',
+    'IIT Kanpur',
+    'IIT Guwahati',
+    'IIT Kharagpur',
+    'IIT Madras',
+    'IIT Jodhpur',
+    'IIT Roorkee',
+    'Other'
+  ];
+
+  preregForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('',  Validators.required),
+    college: new FormControl('',  Validators.required),
+    collegeName: new FormControl('')
+  });
+
   isOverlayOpen = false;
 
   @ViewChild('toggleButton') toggle: ElementRef;
 
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2, private backendService: BackendService) {
+    console.log(this.backendService.currentStatusValue);
   }
 
   showOverlay(): void{
@@ -39,6 +65,27 @@ export class AppComponent {
     {
       this.isOverlayOpen = false;
     }
+  }
+
+  submitForm(): void {
+    console.log('TODO');
+    console.log(this.preregForm.value);
+    this.backendService.sendPrereg(
+      this.preregForm.value.name,
+      this.preregForm.value.email,
+      this.preregForm.value.college,
+      this.preregForm.value.collegeName,
+    ).subscribe(ret => {
+      console.log('Received');
+    });
+  }
+
+  get collegeEntered(): string {
+    return this.preregForm.value.college;
+  }
+
+  get currentStatus(): boolean {
+    return this.backendService.currentStatusValue;
   }
 
 }

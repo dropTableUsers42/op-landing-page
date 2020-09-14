@@ -12,10 +12,27 @@
     [arrowSize]="'10px'"></slideshow>
   </div>
 
-
-  <img id="landingTitle">
+  <form *ngIf="!currentStatus" id="prereg-form" [formGroup]="preregForm" (ngSubmit)="submitForm()">
+    <p class="text label">Pre-register for the OP</p>
+    <div class="col-flex hcentered" id="input_fields">
+      <input class="input" placeholder="Name" formControlName="name">
+      <input class="input" placeholder="Email ID" formControlName="email">
+      <mat-form-field id="select" appearance="fill">
+        <mat-select floatLabel='never' placeholder='College' formControlName='college'>
+          <mat-option>
+            None
+          </mat-option>
+          <mat-option *ngFor="let college of collegeNames" [value]="college">
+            {{college}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <input *ngIf="collegeEntered === 'Other'"  class="input" placeholder="College" formControlName="collegeName">
+      <input class="button-trans" id="submit" type="submit" value="Pre-register">
+    </div>
+  </form>
+  <p *ngIf="currentStatus" class="text label hcentered">Thank you for pre-registering!</p>
 </div>
-
 
 <app-overlay #overlay [show]="isOverlayOpen" (closeEvent)="closeOverlay($event)"></app-overlay>
 
