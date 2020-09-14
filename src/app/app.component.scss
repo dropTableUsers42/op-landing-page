@@ -61,6 +61,7 @@
 
 #prereg-form {
 	text-align: center;
+	margin-bottom: 300px;
 
 	width: 100%;
 
@@ -92,12 +93,6 @@
 		#input_fields {
 			width: 200px;
 		}
-	}
-}
-
-@media screen and (max-width: 600px) {
-	#prereg-form {
-		margin-bottom: 250px;
 	}
 }
 
