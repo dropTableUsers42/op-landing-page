@@ -5,6 +5,7 @@
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	width: 100vw;
 }
 
 #topLogo {
@@ -60,6 +61,8 @@
 
 #prereg-form {
 	text-align: center;
+
+	width: 100%;
 
 	.label {
 		margin-bottom: 10px;
