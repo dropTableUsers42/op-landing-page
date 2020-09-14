@@ -68,10 +68,6 @@
 		margin-bottom: 10px;
 	}
 
-	@media screen and (max-width: 600px) {
-		margin-bottom: 80px;
-	}
-
 	#input_fields {
 		width: 300px;
 
@@ -96,6 +92,12 @@
 		#input_fields {
 			width: 200px;
 		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#prereg-form {
+		margin-bottom: 80px;
 	}
 }
 
