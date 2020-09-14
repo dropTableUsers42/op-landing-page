@@ -42,7 +42,7 @@ export class AppComponent {
 
   preregForm = new FormGroup({
     name: new FormControl('', Validators.required),
-    email: new FormControl('',  [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
+    email: new FormControl('',  [Validators.required, Validators.pattern('^[a-z0-9A-Z._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
     college: new FormControl('',  Validators.required),
     collegeName: new FormControl('')
   } );
