@@ -13,15 +13,12 @@
   </div>
 
   <form *ngIf="!currentStatus" id="prereg-form" [formGroup]="preregForm" (ngSubmit)="submitForm()">
-    <p class="text label">Pre-register for the OP</p>
+    <p class="text label">Unlock the Beta Access</p>
     <div class="col-flex hcentered" id="input_fields">
       <input class="input" placeholder="Name" formControlName="name">
-      <input class="input" placeholder="Email ID" formControlName="email">
+      <input class="input" placeholder="College email ID" formControlName="email">
       <mat-form-field id="select" appearance="fill">
         <mat-select floatLabel='never' placeholder='College' formControlName='college'>
-          <mat-option>
-            None
-          </mat-option>
           <mat-option *ngFor="let college of collegeNames" [value]="college">
             {{college}}
           </mat-option>

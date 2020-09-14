@@ -27,17 +27,16 @@ export class AppComponent {
   ];
 
   collegeNames = [
-    'BITS Pilani - Pilani Campus',
-    'BITS Pilani - Goa Campus',
-    'BITS Pilani - Hyderabad Campus',
     'IIT Bombay',
+    'BITS Pilani - Pilani Campus',
     'IIT Delhi',
     'IIT Kanpur',
     'IIT Guwahati',
     'IIT Kharagpur',
     'IIT Madras',
-    'IIT Jodhpur',
     'IIT Roorkee',
+    'BITS Pilani - Goa Campus',
+    'BITS Pilani - Hyderabad Campus',
     'Other'
   ];
 

@@ -49,9 +49,9 @@ export class BackendService {
       body['college'] = college;
     }
 
+    this.updateStatus(true);
     return this.httpClient.post('https://op-waitlist.herokuapp.com', body = body).pipe(map(ret => {
       console.log('Receiving');
-      this.updateStatus(true);
     }));
   }
 }
